@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.word2image", "Aspose.Word2Image\Aspose.word2image.csproj", "{230C7B95-891C-4CB5-BE8B-BF2A09655E8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.word2pdf", "Microsoft.word2pdf\Microsoft.word2pdf.csproj", "{324BFC4D-8F79-479F-997A-49A00023EAC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{230C7B95-891C-4CB5-BE8B-BF2A09655E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230C7B95-891C-4CB5-BE8B-BF2A09655E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230C7B95-891C-4CB5-BE8B-BF2A09655E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230C7B95-891C-4CB5-BE8B-BF2A09655E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{324BFC4D-8F79-479F-997A-49A00023EAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324BFC4D-8F79-479F-997A-49A00023EAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324BFC4D-8F79-479F-997A-49A00023EAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{324BFC4D-8F79-479F-997A-49A00023EAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
