@@ -9,6 +9,8 @@ output/
 
 _ReSharper.*/
 
+_temp/
+
 *.suo
 
 *.scc
