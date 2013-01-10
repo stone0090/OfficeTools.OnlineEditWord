@@ -1,0 +1,274 @@
+<html>
+<head><title>DsoFramer Control Test Page (KB311765)</title>
+
+<style>
+.fontSize1 {font-size: 65%; 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+.fontSize2 {font-size: 70%; 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+.fontSize3 {font-size: 75%; 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+.fontSize4 {font-size: 80%; 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+.fontSize5 {font-size: 125%; 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+
+.fakehlink {cursor: hand; text-decoration: underline; color: #0066CC; font-weight:normal;}
+
+</style>
+
+</head>
+<body bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- web page script -->
+
+<script language="VBScript">
+ Dim bDocOpen
+
+ Sub oframe_OnDocumentOpened(str, obj)
+    Dim s, s2
+    On Error Resume Next
+    bDocOpen = True
+
+    if len(str) = 0 then
+      str = "New Document"
+    else
+      Dim x
+      x = InStr(str, "\")
+      if x then
+         do
+            str = mid(str, x+1)
+            x = Instr(str, "\")
+         loop while x > 0
+      else
+         x = Instr(str, "/")
+         if x Then
+           do
+              str = mid(str, x+1)
+              x = Instr(str, "/")
+           loop while x > 0
+         end if
+      end if
+    end if
+
+    s = obj.Application.Name
+    if len(s) = 0 then s = "Unknown Server"
+
+    document.all.tstat.InnerHTML = "File: " & str & "<br>Server: " & s
+ End Sub
+
+ Sub oframe_OnDocumentClosed()
+   bDocOpen = False
+   document.all.tstat.InnerHTML = "Try another file."
+ End Sub
+
+ Sub NewDoc()
+   On Error Resume Next
+   oframe.showdialog 0 'dsoDialogNew
+   if err.number then
+      MsgBox "Unable to Create New Object: " & err.description
+   end if
+ End Sub
+
+ Sub OpenDoc()
+   On Error Resume Next
+   document.all.oframe.showdialog 1 'dsoDialogOpen
+    if err.number then
+      MsgBox "Unable to Open Document: " & err.description
+   end if
+ End Sub
+
+ Sub OpenWebDoc()
+   Dim sUrl
+   On Error Resume Next
+   sUrl = InputBox("Type the URL to a file on a Web Folder...", ,"http://[server]/[folder]/test.doc")
+   If Len(sUrl) Then
+     oframe.open sUrl, true
+     if err.number then
+       MsgBox "Unable to Open URL: " & err.description
+     end if
+   End If
+ End Sub
+
+ Sub SaveCopyDoc()
+   On Error Resume Next
+   If Not bDocOpen Then
+      MsgBox "You do not have a document open."
+   Else
+      oframe.showdialog 3 'dsoDialogSaveCopy
+   End If
+ End Sub
+
+ Sub ChgLayout()
+   On Error Resume Next
+   If Not bDocOpen Then
+      MsgBox "You do not have a document open."
+   Else
+      oframe.showdialog 5 'dsoDialogPageSetup
+   End If
+ End Sub
+
+ Sub PrintDoc()
+   On Error Resume Next
+   If Not bDocOpen Then
+      MsgBox "You do not have a document open."
+   Else
+      oframe.printout True
+   End If
+ End Sub
+
+ Sub CloseDoc()
+   On Error Resume Next
+   If Not bDocOpen Then
+      MsgBox "You do not have a document open."
+   Else
+      oframe.close
+   End If
+ End Sub
+
+ Sub ToggleTitlebar()
+   Dim x
+   On Error Resume Next
+   x = oframe.Titlebar
+   oframe.Titlebar = Not x
+ End Sub
+
+ Sub ToggleToolbars()
+   Dim x
+   On Error Resume Next
+   x = oframe.Toolbars
+   oframe.Toolbars = Not x
+ End Sub
+
+ Sub ToggleMenubar()
+   Dim x
+   On Error Resume Next
+   x = oframe.Menubar
+   oframe.Menubar = Not x
+   oframe.Activate
+ End Sub
+</script>
+
+<!--titlebar start-->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFCC00">
+ <tr>
+    <td bgcolor="#FFCC00" valign="top" width="250" rowspan="2"><img src="officelogo.gif" alt="Microsoft(R) Office" border="0" /></td>
+    <td bgcolor="#FFCC00" valign="middle" height="20" align="right" class="fontSize1" nowrap="true">DSO Framer ActiveX Document Control Sample &nbsp;</td>
+ </tr>
+ <tr><td bgcolor="#FFCC00" valign="top" height="40" align="right"><a href="http://www.microsoft.com/"><img src="mslogo.gif" border="0" alt="microsoft.com"></a></td></tr>
+ <tr><td bgcolor="#FFFFFF" valign="top" height="2"></td><td bgcolor="#FFFFFF" valign="top" height="2"></td></tr>
+ <tr><td bgcolor="#FFCC00" valign="top" height="2"></td><td bgcolor="#FFCC00" valign="top" height="2"></td></tr>
+ <tr><td bgcolor="#FFFFFF" valign="top" height="5"></td><td bgcolor="#FFFFFF" valign="top" height="5"></td></tr>
+</table>
+
+<!--titlebar end-->
+
+<!--main body start-->
+
+<table width="100%" height="87%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+ <td valign="top" width="10"></td>
+ <td valign="top" width="175">
+
+<!--left-side start-->
+
+  <table cellpadding="0" cellspacing="0" border="0" width="175" bgcolor="#f1f1f1">
+
+   <!-- Load a Document -->
+    <tr>
+      <td valign="top" bgcolor="#FFCC00" colspan="2"><img src="lefttopcurve.gif" width="10" height="10"></td>
+      <td valign="middle" bgcolor="#FFCC00" class="fontSize1" width="155" rowspan="2"><B>Load a Document</B></td>
+      <td valign="top" bgcolor="#FFCC00" colspan="2"><img src="righttopcurve.gif" width="10" height="10"></td>
+    </tr>
+    <tr>
+      <td width="1" bgcolor="#D6D3D6"></td><td bgcolor="#FFCC00" width="9" height="9"></td>
+      <td bgcolor="#FFCC00" width="9" height="10"></td><td width="1" bgcolor="#D6D3D6"></td>
+    </tr>
+    <tr>
+      <td width="1" bgcolor="#D6D3D6"></td>
+      <td width="9"></td>
+      <td class="fontSize1" width="155"><br>
+        <div class="fakehlink" onClick="NewDoc">Create a New Document</div><br>
+        <div class="fakehlink" onClick="OpenDoc">Open a Document</div><br>
+        <div class="fakehlink" onClick="OpenWebDoc">Open a Web Document</div><br>
+      </td>
+      <td width="9"></td>
+      <td width="1" bgcolor="#D6D3D6"></td>
+    </tr>
+
+   <!-- Perform Document Task -->
+    <tr>
+      <td width="1" bgcolor="#D6D3D6"></td><td width="9" height="20" bgcolor="#FFCC00"></td>
+      <td valign="middle" bgcolor="#FFCC00" class="fontSize1" width="155"><B>Perform Document Task</B></td>
+      <td width="9" height="20" bgcolor="#FFCC00"></td><td width="1" bgcolor="#D6D3D6"></td>
+    </tr>
+    <tr>
+      <td width="1" bgcolor="#D6D3D6"></td>
+      <td width="9"></td>
+      <td class="fontSize1" width="155"><br>
+        <div class="fakehlink" onClick="SaveCopyDoc">Save a Copy</div><br>
+        <div class="fakehlink" onClick="ChgLayout">Change Page Layout</div><br>
+        <div class="fakehlink" onClick="PrintDoc">Print the Document</div><br>
+        <div class="fakehlink" onClick="CloseDoc">Close the Document</div><br>
+      </td>
+      <td width="9"></td>
+      <td width="1" bgcolor="#D6D3D6"></td>
+    </tr>
+
+   <!-- Control Appearance -->
+    <tr>
+      <td width="1" bgcolor="#D6D3D6"></td><td width="9" height="20" bgcolor="#FFCC00"></td>
+      <td valign="middle" bgcolor="#FFCC00" class="fontSize1" width="155"><B>Control Appearance</B></td>
+      <td width="9" height="20" bgcolor="#FFCC00"></td><td width="1" bgcolor="#D6D3D6"></td>
+    </tr>
+    <tr>
+      <td width="1" bgcolor="#D6D3D6"></td>
+      <td width="9"></td>
+      <td class="fontSize1" width="155"><br>
+        <div class="fakehlink" onClick="ToggleTitlebar">Show/Hide Titlebar</div><br>
+        <div class="fakehlink" onClick="ToggleToolbars">Show/Hide Toolbars</div><br>
+        <div class="fakehlink" onClick="ToggleMenubar">Show/Hide Menubar</div><br>
+      </td>
+      <td width="9"></td>
+      <td width="1" bgcolor="#D6D3D6"></td>
+    </tr>
+
+
+    <tr><td colspan="5"><img src="bottomcurve.gif" width="175" height="10"></td></tr>
+  </table>
+
+  <p class="fontSize1"><span id="tstat">Click on the document icon on the titlebar to show the file menu, or use the commands above to perform an action.</span>
+
+<!--left-side end-->
+
+ </td>
+ <td valign="top" width="10"></td>
+ <td valign="top">
+
+<!--right-side start-->
+
+  <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+     <td valign="top"></td>
+     <td valign="top" colspan="2">
+       <object classid="clsid:00460182-9E5E-11d5-B7C8-B8269041DD57" id="oframe" width="100%" height="100%" >
+         <param name="BorderStyle" value="1">
+         <param name="TitlebarColor" value="52479">
+         <param name="TitlebarTextColor" value="0">
+         <param name="Menubar" value="1"> 
+       </object>
+     </td>
+    </tr>
+    <tr>
+     <td valign="top" height="15"></td>
+     <td valign="bottom" class="fontSize1" colspan="2">Copyright (c)2001-2004 Microsoft Corporation. All rights reserved.</td>
+    </tr>
+  </table>
+
+<!--right-side end-->
+
+ </td>
+ <td valign="top" width="10"></td>
+</tr>
+</table>
+
+<!--main body end-->
+
+</body>
+</html>

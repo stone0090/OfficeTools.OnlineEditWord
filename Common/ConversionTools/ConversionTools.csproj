@@ -66,7 +66,6 @@
     <Content Include="dll\Aspose.Words.dll" />
     <Content Include="dll\itextsharp.dll" />
     <Content Include="Doc2Pdf.aspx" />
-    <Content Include="DocOperation.aspx" />
     <Content Include="Web.config" />
     <Content Include="Doc2Pdf2.aspx" />
   </ItemGroup>
@@ -84,13 +83,6 @@
     </Compile>
     <Compile Include="Doc2Pdf.aspx.designer.cs">
       <DependentUpon>Doc2Pdf.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DocOperation.aspx.cs">
-      <DependentUpon>DocOperation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DocOperation.aspx.designer.cs">
-      <DependentUpon>DocOperation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Doc2Pdf2.aspx.cs">
