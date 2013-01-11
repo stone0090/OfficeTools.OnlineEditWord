@@ -1,46 +1,152 @@
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>DsoFramer Control Test Page (KB311765)</title>
-    <style>
-        .fontSize1
+    <style type="text/css">
+        body
         {
             font-size: 65%;
             font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+            margin: 0px;
+            text-align: center;
+            background-color: #FFFFFF;
+            background-attachment: scroll;
         }
-        .fontSize2
+        #logo
         {
-            font-size: 70%;
-            font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+            width: 250px;
+            height: 60px;
+            float: left;
+            margin: 0px 0px 2px 0px;
+            background-color: #FFCC00;
         }
-        .fontSize3
+        #title
         {
-            font-size: 75%;
-            font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+            height: 20px;
+            min-width: 500px;
+            line-height: 20px;
+            text-align: right;
+            background-color: #FFCC00;
         }
-        .fontSize4
+        #logo2
         {
-            font-size: 80%;
-            font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+            height: 40px;
+            margin: 0px 0px 2px 0px;
+            text-align: right;
+            background-color: #FFCC00;
         }
-        .fontSize5
+        #logo2 a img
         {
-            font-size: 125%;
-            font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+        	border: none;
         }
-        .fakehlink
+        #horizon
         {
-            cursor: hand;
-            text-decoration: underline;
-            color: #0066CC;
-            font-weight: normal;
+            height: 2px;
+            margin: 0px 0px 5px 0px;
+            background-color: #FFCC00;
         }
-    </style>
+        #mainbody
+        {
+        	height: 500px;
+        	background-color: #FFCCFF;
+        }
+
+        #sidebar
+        {
+        	width: 175px;
+        	height: 100%;
+        	margin: 0px 0px 0px 10px;
+        	background: #f1f1f1;
+        }
+        #verticalLine1
+        {
+        	height: 480px;
+        	width: 5px;
+        	float: left;
+        	margin: auto;
+        	background-color: #D6D3D6;
+        }
+        #verticalLine2
+        {
+        	height: 100%;
+        	width: 5px;
+        	float: left;
+        	clear: right;
+        	background-color: #D6D3D6;
+        }
+        #sidebarContent
+        {
+        	height: 100%;
+        	width: 165px;
+        	float: left;
+        	background-color: #FFFF99;
+        }
+
+        #sidebartitle1
+        {
+        	height: 20px;
+        	background: #FFCC00;
+        }        
+        #upperLeftCorner 
+        {
+        	height: 10px;
+        	width: 10px;
+        	float: left;
+        }
+        #sidebartext1
+        {
+        	height: 20px;
+        	width: 155px;
+        	float: left;
+        	line-height: 20px;
+        	text-align: left;
+        }  
+        #upperRightCorner 
+        {
+        	height: 10px;
+        	width: 10px;
+        	background: #FFCC00;
+        	float: left;
+        	clear: right;
+        }
+        </style>
 </head>
 <body>
-    <!-- web page script -->
-    <!--titlebar start-->
-    <!--titlebar end-->
-    <!--main body start-->
-    <!--main body end-->
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <img src="officelogo.gif" alt="Microsoft(R) Office" /></div>
+            <div id="title">
+                DSO Framer ActiveX Document Control Sample &nbsp;</div>
+            <div id="logo2">
+                <a href="http://www.microsoft.com/">
+                    <img src="mslogo.gif" alt="microsoft.com" /></a></div>
+            <div id="horizon">
+            </div>
+        </div>
+        <div id="mainbody">
+            <div id="sidebar">
+            	<div id="verticalLine1"></div>
+            	<div id="sidebarContent">
+            	</div>
+            	<div id="verticalLine2"></div>
+
+            	<!--
+
+            	<div id="sidebartitle1">
+	            	<div id="upperLeftCorner"><img src="lefttopcurve.gif" /></div>
+	            	<div id="sidebartext1"><B>Load a Document</B></div>
+	            	<div id="upperRightCorner"><img src="righttopcurve.gif" /></div>
+            	</div>
+
+            	-->
+
+            </div>
+            <div id="doccontrol">
+            </div>
+        </div>
+        <div id="footer">
+        </div>
+    </div>
 </body>
 </html>
