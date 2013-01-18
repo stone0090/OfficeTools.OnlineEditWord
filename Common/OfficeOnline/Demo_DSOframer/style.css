@@ -1,0 +1,138 @@
+﻿html
+{
+    overflow-y: scroll;
+    height: 100%;
+}
+body
+{
+    height: 100%;
+    font-size: 65%;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    margin: 0px;
+    text-align: center;
+    background-color: #FFFFFF;
+    background-attachment: scroll;
+}
+.fakehlink
+{
+    cursor: hand;
+    text-decoration: underline;
+    color: #0066CC;
+    font-weight: normal;
+    padding: 0px 0px 0px 9px;
+}
+#logo
+{
+    width: 250px;
+    height: 60px;
+    float: left;
+    margin: 0px 0px 2px 0px;
+    background-color: #FFCC00;
+}
+#title
+{
+    height: 20px;
+    min-width: 500px;
+    line-height: 20px;
+    text-align: right;
+    background-color: #FFCC00;
+}
+#logo2
+{
+    height: 40px;
+    margin: 0px 0px 2px 0px;
+    text-align: right;
+    background-color: #FFCC00;
+}
+#logo2 a img
+{
+    border: none;
+}
+#horizon
+{
+    height: 2px;
+    margin: 0px 0px 5px 0px;
+    background-color: #FFCC00;
+}
+#mainbody
+{
+    height: 85%;
+}
+#sidebar
+{
+    width: 175px;
+    height: 336px;
+    margin: 0px 0px 0px 10px;
+    background-color: #f1f1f1;
+    text-align: left;
+    float: left;
+}
+#sidebarHeader
+{
+    height: 20px;
+    width: 175px;
+    background-color: #FFCC00;
+}
+#upperLeftCorner
+{
+    height: 10px;
+    width: 10px;
+    float: left;
+}
+#sidebarTitle1
+{
+    height: 10px;
+    width: 155px;
+    float: left;
+    line-height: 20px;
+}
+#upperRightCorner
+{
+    height: 10px;
+    width: 10px;
+    background-color: #FFCC00;
+    float: left;
+    clear: right;
+}
+#borderLine
+{
+    width: 173px;
+    height: 10px;
+    border-style: none solid none solid;
+    border-color: #D6D3D6;
+    border-width: 1px;
+    float: left;
+    clear: right;
+}
+#sidebarContent
+{
+    width: 173px;
+    height: 316px;
+    border-style: none solid none solid;
+    border-color: #D6D3D6;
+    border-width: 1px;
+    float: left;
+}
+#sidebarFooter
+{
+    width: 175px;
+    height: 10px;
+    float: left;
+}
+#sidebarTitle2, #sidebarTitle3
+{
+    width: 164px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 0px 0px 9px;
+    background-color: #FFCC00;
+}
+#docControl
+{
+    height: 100%;
+    margin: 0px 10px 0px 195px;
+}
+#copyright
+{
+    text-align: left;
+}
