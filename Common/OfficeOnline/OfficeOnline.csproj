@@ -53,26 +53,25 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ActiveX\DSOframer2007\DSOframer.CAB" />
-    <Content Include="ActiveX\DSOframer2007\DsoFramer_KB311765_x86.exe" />
-    <Content Include="ActiveX\DSOframer2007\readmen.txt" />
-    <Content Include="ActiveX\DSOframer\DSOframer2007.CAB" />
-    <Content Include="ActiveX\DSOframer\readme.txt" />
-    <Content Include="ActiveX\WebFileHelper.CAB" />
-    <Content Include="ActiveX\WebFileHelper2.CAB" />
+    <Content Include="Demo_DSOframer\ActiveX\DSOframer2007\DSOframer2007.CAB" />
+    <Content Include="Demo_DSOframer\ActiveX\DSOframer2007\readme.txt" />
+    <Content Include="Demo_DSOframer\ActiveX\DSOframer\DSOframer.CAB" />
+    <Content Include="Demo_DSOframer\ActiveX\DSOframer\DsoFramer_KB311765_x86.exe" />
+    <Content Include="Demo_DSOframer\ActiveX\DSOframer\readme.txt" />
+    <Content Include="Demo_DSOframer\ActiveX\WebFileHelper.CAB" />
+    <Content Include="Demo_DSOframer\ActiveX\WebFileHelper2.CAB" />
     <Content Include="Default.aspx" />
-    <Content Include="DSOframer_MSOfficialSample\bottomcurve.gif" />
-    <Content Include="DSOframer_MSOfficialSample\lefttopcurve.gif" />
-    <Content Include="DSOframer_MSOfficialSample\mslogo.gif" />
-    <Content Include="DSOframer_MSOfficialSample\officelogo.gif" />
-    <Content Include="DSOframer_MSOfficialSample\righttopcurve.gif" />
-    <Content Include="DSOframer_MSOfficialSample\webtest.htm" />
-    <Content Include="DSOframer_MySample\bottomcurve.gif" />
-    <Content Include="DSOframer_MySample\lefttopcurve.gif" />
-    <Content Include="DSOframer_MySample\mslogo.gif" />
-    <Content Include="DSOframer_MySample\officelogo.gif" />
-    <Content Include="DSOframer_MySample\righttopcurve.gif" />
-    <Content Include="DSOframer_MySample\webtest.htm" />
+    <Content Include="Demo_DSOframer\bottomcurve.gif" />
+    <Content Include="Demo_DSOframer\lefttopcurve.gif" />
+    <Content Include="Demo_DSOframer\mslogo.gif" />
+    <Content Include="Demo_DSOframer\officelogo.gif" />
+    <Content Include="Demo_DSOframer\righttopcurve.gif" />
+    <Content Include="Demo_DSOframer\webtest.htm" />
+    <Content Include="Demo_DSOframer\script.js" />
+    <Content Include="Demo_DSOframer\style.css" />
+    <Content Include="Demo_DSOframer\webtest2.htm" />
+    <Content Include="Demo_Layout\style.css" />
+    <Content Include="Demo_Layout\webtest.htm" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
