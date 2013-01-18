@@ -1,0 +1,102 @@
+﻿<html>
+<head>
+    <title>DsoFramer Control Test Page (KB311765)</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="InitEvent()">
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <img src="officelogo.gif" alt="Microsoft(R) Office" /></div>
+            <div id="title">
+                DSO Framer ActiveX Document Control Sample &nbsp;</div>
+            <div id="logo2">
+                <a href="http://www.microsoft.com/">
+                    <img src="mslogo.gif" alt="microsoft.com" /></a></div>
+            <div id="horizon">
+            </div>
+        </div>
+        <div id="mainbody">
+            <div id="sidebar">
+                <div id="sidebarHeader">
+                    <div id="upperLeftCorner">
+                        <img src="lefttopcurve.gif" /></div>
+                    <div id="sidebarTitle1">
+                        <b>Load a Document</b></div>
+                    <div id="upperRightCorner">
+                        <img src="righttopcurve.gif" /></div>
+                    <div id="borderLine">
+                    </div>
+                </div>
+                <div id="sidebarContent">
+                    <br />
+                    <div class="fakehlink" onclick="NewDoc()">
+                        Create a New Document</div>
+                    <br />
+                    <div class="fakehlink" onclick="OpenDoc()">
+                        Open a Document</div>
+                    <br />
+                    <div class="fakehlink" onclick="OpenWebDoc()">
+                        Open a Web Document</div>
+                    <br />
+                    <div id="sidebarTitle2">
+                        <b>Perform Document Task</b>
+                    </div>
+                    <br />
+                    <div class="fakehlink" onclick="SaveCopyDoc()">
+                        Save a Copy</div>
+                    <br />
+                    <div class="fakehlink" onclick="ChgLayout()">
+                        Change Page Layout</div>
+                    <br />
+                    <div class="fakehlink" onclick="PrintDoc()">
+                        Print the Document</div>
+                    <br />
+                    <div class="fakehlink" onclick="CloseDoc()">
+                        Close the Document</div>
+                    <br />
+                    <div id="sidebarTitle3">
+                        <b>Control Appearance </b>
+                    </div>
+                    <br />
+                    <div class="fakehlink" onclick="ToggleTitlebar()">
+                        Show/Hide Titlebar</div>
+                    <br />
+                    <div class="fakehlink" onclick="ToggleToolbars()">
+                        Show/Hide Toolbars</div>
+                    <br />
+                    <div class="fakehlink" onclick="ToggleMenubar()">
+                        Show/Hide Menubar</div>
+                    <br />
+                </div>
+                <div id="sidebarFooter">
+                    <img src="bottomcurve.gif" />
+                </div>
+                <p>Click on the document icon on the titlebar to show the file menu, or use the commands
+                    above to perform an action.</p>
+            </div>
+            <div id="docControl">
+                <object classid="clsid:00460182-9E5E-11d5-B7C8-B8269041DD57" id="oframe" width="100%"
+                    height="100%" codebase="ActiveX/DSOframer/DSOframer.CAB#version=1,0,0,0">
+                    <param name="BorderStyle" value="1">
+                    <param name="TitlebarColor" value="52479">
+                    <param name="TitlebarTextColor" value="0">
+                    <param name="Menubar" value="1">
+                </object>
+                <!-- dsoframe事件 开始 -->
+                <script type="text/javascript" language="jscript" for="oframe" event="OnDocumentOpened(str,obj)">
+                    OnDocumentOpened(str,obj);
+                </script>
+                <script type="text/javascript" language="jscript" for="oframe" event="OnDocumentClosed()">
+                    OnDocumentClosed();
+                </script>
+                <!-- dsoframe事件 结束 -->
+                <div id="copyright">
+                    Copyright (c)2001-2004 Microsoft Corporation. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

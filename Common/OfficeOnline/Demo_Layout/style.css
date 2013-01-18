@@ -1,0 +1,154 @@
+﻿/*基本信息*/
+body
+{
+    font-size: 12px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    margin: 0px;
+    text-align: center;
+    background: #FFF;
+}
+a:link, a:visited
+{
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover
+{
+}
+
+/*页面层容器*/
+#container
+{
+    width: 800px;
+    margin: 10px auto;
+    background: #99FF99;
+}
+
+#header
+{
+}
+
+#menu
+{
+    height: 50px;
+    padding: 20px;
+    background: #CCCC99;
+}
+#menu ul
+{
+    list-style: none;
+    margin: 0px;
+}
+#menu ul li
+{
+    float: left;
+    margin: 0px 10px;
+    display: block;
+    line-height: 28px;
+}
+#menu ul li a:link, #menu ul li a:visited
+{
+    font-weight: bold;
+    color: #666;
+}
+
+.menuDiv
+{
+    width: 1px;
+    height: 28px;
+    background: #999;
+}
+
+#banner
+{
+    height: 100px;
+    width: 780px;
+    margin: 5px auto;
+    background: #CCFF99;
+    border-bottom: 5px solid #EFEFEF;
+    clear: both;
+}
+
+#pagebody
+{
+    background: #FFCCFF;
+    height: 300px;
+    width: 780px;
+    margin: 5px auto;
+}
+
+#sidebar
+{
+    text-align: left; /*文字左对齐*/
+    float: left; /*浮动居左*/
+    clear: left; /*不允许左侧存在浮动*/
+    overflow: hidden; /*超出宽度部分隐藏*/
+    background: #FF9900;
+    width: 265px;
+    height: 290px;
+    margin: 5px 0px 5px 5px;
+}
+
+#mainbody
+{
+    text-align: left;
+    float: right; /*浮动居右*/
+    clear: right; /*不允许右侧存在浮动*/
+    overflow: hidden;
+    background: #9999FF;
+    width: 500px;
+    height: 290px;
+    margin: 5px 5px 5px 5px;
+}
+
+#footer
+{
+    background: #009966;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fontSize1
+{
+    font-size: 65%;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.fontSize2
+{
+    font-size: 70%;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.fontSize3
+{
+    font-size: 75%;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.fontSize4
+{
+    font-size: 80%;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.fontSize5
+{
+    font-size: 125%;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.fakehlink
+{
+    cursor: hand;
+    text-decoration: underline;
+    color: #0066CC;
+    font-weight: normal;
+}
