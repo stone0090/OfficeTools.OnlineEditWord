@@ -68,11 +68,14 @@
     <Content Include="DSOframer_MSOfficialSample\righttopcurve.gif" />
     <Content Include="DSOframer_MSOfficialSample\webtest.htm" />
     <Content Include="DSOframer_MySample\bottomcurve.gif" />
+    <Content Include="DSOframer_MySample\style.css" />
+    <Content Include="DSOframer_MySample\webtest.htm" />
     <Content Include="DSOframer_MySample\lefttopcurve.gif" />
     <Content Include="DSOframer_MySample\mslogo.gif" />
     <Content Include="DSOframer_MySample\officelogo.gif" />
     <Content Include="DSOframer_MySample\righttopcurve.gif" />
-    <Content Include="DSOframer_MySample\webtest.htm" />
+    <Content Include="LayoutDemo\style.css" />
+    <Content Include="LayoutDemo\webtest.htm" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
