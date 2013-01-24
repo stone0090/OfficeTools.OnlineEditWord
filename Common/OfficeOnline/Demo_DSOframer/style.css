@@ -1,14 +1,12 @@
-﻿html
-{
-    overflow-y: scroll;
+﻿html, body
+{    
+    margin: 0px;
     height: 100%;
 }
 body
-{
-    height: 100%;
+{    
     font-size: 65%;
-    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    margin: 0px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;    
     text-align: center;
     background-color: #FFFFFF;
     background-attachment: scroll;
@@ -21,6 +19,10 @@ body
     font-weight: normal;
     padding: 0px 0px 0px 9px;
 }
+#container{
+    height: 100%;
+}
+
 #logo
 {
     width: 250px;

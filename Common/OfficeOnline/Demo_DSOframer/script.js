@@ -5,7 +5,7 @@ var isOpened = false;
 //初始化oframe对象
 function InitEvent() {
     oframe = document.getElementById("oframe");
-    alert("请您将IE的文档模式调成IE7标准模式");
+    //alert("请您将IE的文档模式调成IE7标准模式");
 }
 
 //dsoframe(打开)(关闭)事件
@@ -49,16 +49,12 @@ function CloseDoc() {
         oframe.close();
 }
 function ToggleTitlebar() {
-    if (CheckFileOpened())
         oframe.Titlebar = !oframe.Titlebar;
 }
 function ToggleToolbars() {
-    if (CheckFileOpened())
         oframe.Toolbars = !oframe.Toolbars;
 }
 function ToggleMenubar() {
-    if (CheckFileOpened()) {
         oframe.Menubar = !oframe.Menubar;
-        oframe.Activate();
-    }
+        oframe.Activate();    
 }
