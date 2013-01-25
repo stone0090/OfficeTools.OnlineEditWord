@@ -70,6 +70,7 @@
     <Content Include="Demo_DSOframer\script.js" />
     <Content Include="Demo_DSOframer\style.css" />
     <Content Include="Demo_DSOframer\webtest2.htm" />
+    <Content Include="Demo_DSOframer\webtest3.htm" />
     <Content Include="Demo_Layout\style.css" />
     <Content Include="Demo_Layout\webtest.htm" />
     <Content Include="Web.config" />
