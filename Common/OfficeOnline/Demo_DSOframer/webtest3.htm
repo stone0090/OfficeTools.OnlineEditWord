@@ -47,13 +47,6 @@
                 oframe.close();
             }
         }
-        
-        //激活Word窗口
-        function SetActivate() {
-            if (CheckFileOpened()) {
-                oframe.Activate();
-            }
-        }
 
         //dsoframe事件
         function OnDocumentOpened(str, obj) {
@@ -65,14 +58,6 @@
             isOpened = false;
             alert("触发了dsoframe的OnDocumentClosed事件！");
         }
-        
-        function OnDocActivated(isActivated) {
-            alert("触发了dsoframe的OnDocActivated事件！");
-        }
-        
-        function OnScreenModeChanged(isFullScreenMode) {
-            
-        }
 
     </script>
 </head>
@@ -80,10 +65,9 @@
     <div>
         <table width="100%">
             <tr>
-                <td width="150px" style="vertical-align: top;">
+                <td width="130px" style="vertical-align: top;">
                     <input type="button" value="新建Word文档" onclick="AddNewWord()" />
                     <input type="button" value="关闭Word文档" onclick="CloseWord()" />
-                    <input type="button" value="激活Word窗口" onclick="SetActivate()" />
                 </td>
                 <td>
                     <object classid="clsid:00460182-9E5E-11d5-B7C8-B8269041DD57" id="oframe" width="100%"
@@ -101,12 +85,6 @@
                         </script>
                         <script type="text/javascript" language="jscript" for="oframe" event="OnDocumentClosed()">
                             OnDocumentClosed();
-                        </script>
-                        <script type="text/javascript" language="jscript" for="oframe" event="OnDocActivated(isActivated)">
-                            OnDocActivated(isActivated);
-                        </script>
-                        <script type="text/javascript" language="jscript" for="oframe" event="OnScreenModeChanged(isFullScreenMode)">
-                            OnScreenModeChanged(isFullScreenMode);
                         </script>
                         <!-- dsoframe事件 结束 -->
                     </div>
