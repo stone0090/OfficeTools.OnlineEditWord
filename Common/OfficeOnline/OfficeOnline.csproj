@@ -71,6 +71,7 @@
     <Content Include="Demo_DSOframer\style.css" />
     <Content Include="Demo_DSOframer\webtest2.htm" />
     <Content Include="Demo_DSOframer\webtest3.htm" />
+    <Content Include="Demo_DSOframer\webtest4.aspx" />
     <Content Include="Demo_Layout\style.css" />
     <Content Include="Demo_Layout\webtest.htm" />
     <Content Include="Web.config" />
@@ -83,13 +84,22 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demo_DSOframer\webtest4.aspx.cs">
+      <DependentUpon>webtest4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo_DSOframer\webtest4.aspx.designer.cs">
+      <DependentUpon>webtest4.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Demo_DSOframer\Doc\111.doc" />
     <None Include="Demo_DSOframer\Doc\123.doc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CKEditor\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
