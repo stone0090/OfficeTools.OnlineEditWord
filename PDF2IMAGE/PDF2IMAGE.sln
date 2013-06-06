@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallComponents.PDF.Rasteriz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCpdf.pdf2image", "ABCpdf.pdf2image\ABCpdf.pdf2image.csproj", "{2FC2CAE0-EF3C-46CA-923A-74C9DF012615}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apitron.PDF.Rasterizer.pdf2image", "Apitron.PDF.Rasterizer.pdf2image\Apitron.PDF.Rasterizer.pdf2image.csproj", "{4EC2A4AB-2115-49D9-93D4-DC3DAD59DB47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
