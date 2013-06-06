@@ -51,8 +51,8 @@ namespace Apitron.PDF.Rasterizer.pdf2image
                 endPageNum = startPageNum;
             }
 
-            // start to convert each page
-            for (int i = startPageNum; i <= endPageNum; i++)
+            // start to convert each page 0-based numeration
+            for (int i = startPageNum-1; i <= endPageNum-1; i++)
             {
                 RenderingSettings option = new RenderingSettings();
                 option.DrawImages = true;
