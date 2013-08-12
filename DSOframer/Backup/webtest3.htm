@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        
+        //全局变量
+        var oframe;
+        var isOpened = false;
+
+        //初始化oframe对象
+        function InitEvent() {
+            oframe = document.getElementById("oframe");
+            //alert("请您将IE的文档模式调成IE7标准模式");
+        }
+
+        //检查是否打开文档
+        function CheckFileOpened() {
+            if (!isOpened){
+                alert("You do not have a document open.");
+                return false;
+            }else {
+                return true;
+            }
+        }
+
+        //检查是否安装控件
+        function CheckControlInstall() {
+            if (typeof (oframe) == 'undefined'){
+                alert("You must install dsoframe control first.");
+                return false;
+            }else {
+                return true;
+            }
+        }
+        
+        //新建Word文档
+        function AddNewWord() {
+            if (CheckControlInstall()){
+                oframe.CreateNew("Word.Document");
+            }
+        }
+
+        //关闭Word文档
+        function CloseWord() {
+            if (CheckFileOpened()) {
+                oframe.close();
+            }
+        }
+
+        //dsoframe事件
+        function OnDocumentOpened(str, obj) {
+            isOpened = true;
+            alert("触发了dsoframe的OnDocumentOpened事件！");
+        }
+        
+        function OnDocumentClosed() {
+            isOpened = false;
+            alert("触发了dsoframe的OnDocumentClosed事件！");
+        }
+
+    </script>
+</head>
+<body onload="InitEvent()">
+    <div>
+        <table width="100%">
+            <tr>
+                <td width="130px" style="vertical-align: top;">
+                    <input type="button" value="新建Word文档" onclick="AddNewWord()" />
+                    <input type="button" value="关闭Word文档" onclick="CloseWord()" />
+                </td>
+                <td>
+                    <object classid="clsid:00460182-9E5E-11d5-B7C8-B8269041DD57" id="oframe" width="100%"
+                        height="500px" codebase="ActiveX/DSOframer/DSOframer.CAB#version=1,0,0,0">
+                        <param name="BorderStyle" value="1" />
+                        <param name="TitlebarColor" value="52479" />
+                        <param name="TitlebarTextColor" value="0" />
+                        <param name="Menubar" value="1" />
+                        <param name="Titlebar" value="0" />
+                    </object>
+                    <div style="display: none">
+                        <!-- dsoframe事件 开始 -->
+                        <script type="text/javascript" language="jscript" for="oframe" event="OnDocumentOpened(str,obj)">
+                            OnDocumentOpened(str,obj);
+                        </script>
+                        <script type="text/javascript" language="jscript" for="oframe" event="OnDocumentClosed()">
+                            OnDocumentClosed();
+                        </script>
+                        <!-- dsoframe事件 结束 -->
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
