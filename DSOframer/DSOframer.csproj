@@ -72,6 +72,8 @@
     <Content Include="ActiveX\DSOframer\readme.txt" />
     <Content Include="ActiveX\WebFileHelper.CAB" />
     <Content Include="ActiveX\WebFileHelper2.CAB" />
+    <Content Include="FileDownload.aspx" />
+    <Content Include="FileUpload.aspx" />
     <Content Include="Image\bottomcurve.gif" />
     <Content Include="Image\lefttopcurve.gif" />
     <Content Include="Image\mslogo.gif" />
@@ -86,6 +88,20 @@
     <Content Include="webtest4.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileDownload.aspx.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileDownload.aspx.designer.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="webtest4.aspx.cs">
       <DependentUpon>webtest4.aspx</DependentUpon>
@@ -96,11 +112,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Doc\111.doc" />
-    <None Include="Doc\123.doc" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Content Include="Doc\test.doc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

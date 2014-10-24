@@ -80,8 +80,11 @@ function ToggleMenubar() {
 function AddNewWord() {
     oframe.CreateNew("Word.Document");
 }
+function OpenLocalWord(path) {
+    oframe.Open(path, false, "Word.Document");
+}
 function OpenWebWord(url) {
-    oframe.Open(url, true);
+    oframe.Open(url + "?random=" + Math.random(), true);
 }
 function SetUserName() {
     if (CheckFileOpened()) {
@@ -139,6 +142,70 @@ function SetPageFit() { //使页面自动适应用户的可视范围
     }
 }
 
+//上传word服务器的完整范例
+//1、下载word到临时文件目录（要求ie浏览器必须开启了临时文件功能，系统默认是开启的）
+//2、在页面上，使用DSOframer打开临时文件目录中的word，并进行编辑
+//3、保存word到临时文件目录，然后再使用webfile将word上传到服务器
+//备注：使用此方法需要把网站加入受信站点，并把安全级别设置为低，再开启Internet选项-安全-受信任站点-自定义级别-对未标记为可安全执行脚本的ActiviteX控件初始化并执行
+function test() {
+    debugger;
+    alert(GetLocalTempFileName());
+}
 
+//用于上传下载的ActiviteX控件
+var WebFile2;
+//var webfile1 = new ActiveXObject("WebFileHelper.WebFile.1");
+//var webfile2 = new ActiveXObject("WebFileHelper2.WebFile2.1");
+
+function UploadWord(hostUrl) { //上传本地word到服务器上
+    var tempFile1 = GetLocalTempFileName();
+    var tempFile2 = GetLocalTempFileName();
+    try {
+        oframe.Save(tempFile1, true);
+        var fso = new ActiveXObject("Scripting.FileSystemObject"); //word被占用时，上传会失败，所以用fso控件copy一份出来，再上传
+        fso.CopyFile(tempFile1, tempFile2, true);
+        //oframe.close(); //如果担心fso有兼容性问题，就必须先关闭oframe，才能成功上传word
+    } catch (e) {
+        alert("请先打开一个word！");
+        return;
+    }
+    try {
+        //WebFile2.MaxFileSize = 1258290;//该属性可以限制上传的容量
+        WebFile2.UploadFile(tempFile2, "http://" + hostUrl + "/FileUpload.aspx");
+        alert("上传成功！");
+    } catch (e) {
+        var errCode = e.number >> 16 & 0xFFFF;
+        if (errCode == 32778)
+            alert("上传失败:word文件容量过大，必须小于1.2M！");
+        else
+            alert("上传失败:" + e.message + "\n" + e.description);
+    }
+}
+
+function DownloadWord(hostUrl) { //下载word到临时文件目录
+    try {
+        var tempFileName = GetLocalTempFileName();
+        WebFile2.DownloadFile("http://" + hostUrl + "/FileDownload.aspx?random=" + Math.random(), tempFileName);
+        //alert("成功下载word到临时文件目录：" + tempFileName);
+        return tempFileName;
+    } catch (e) {
+        alert("下载失败，请检查您的ie设置！");
+        return "";
+    }
+}
+
+function GetLocalTempFileName() {
+    if (WebFile2 == null) WebFile2 = document.getElementById("WebFile2");
+    var time = new Date();
+    var fileNameFix = PadLeft(time.getFullYear().toString(), 4) + PadLeft((time.getMonth() + 1).toString(), 2) + PadLeft(time.getDate().toString(), 2) + PadLeft(time.getHours().toString(), 2) + PadLeft(time.getMinutes().toString(), 2) + PadLeft(time.getSeconds().toString(), 2) + ("." + Math.random() * 1000).substr(0, 4);
+    var tempFileName = WebFile2.GetLocalTempFile("temp") + "." + fileNameFix + ".doc"; //temp和.doc都是可以自己随意改的
+    return tempFileName;
+}
+
+//字符串长度不足，左边补0
+function PadLeft(str, len) {
+    str = '00000000000000000000000000000' + str;
+    return str.substr(str.length - len);
+}
 
 
