@@ -23,6 +23,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,10 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActiveX\DSOframer2007\DSOframer2007.CAB" />
-    <Content Include="ActiveX\DSOframer2007\readme.txt" />
     <Content Include="ActiveX\DSOframer\DSOframer.CAB" />
     <Content Include="ActiveX\DSOframer\DsoFramer_KB311765_x86.exe" />
-    <Content Include="ActiveX\DSOframer\readme.txt" />
     <Content Include="ActiveX\WebFileHelper.CAB" />
     <Content Include="ActiveX\WebFileHelper2.CAB" />
     <Content Include="FileDownload.aspx" />
@@ -82,10 +81,9 @@
     <Content Include="script.js" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
-    <Content Include="webtest.htm" />
-    <Content Include="webtest2.htm" />
-    <Content Include="webtest3.htm" />
-    <Content Include="webtest4.aspx" />
+    <Content Include="OfficialDemo.htm" />
+    <Content Include="OfficialDemo_JS.htm" />
+    <Content Include="CommonDemo.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileDownload.aspx.cs">
@@ -103,13 +101,6 @@
       <DependentUpon>FileUpload.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="webtest4.aspx.cs">
-      <DependentUpon>webtest4.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="webtest4.aspx.designer.cs">
-      <DependentUpon>webtest4.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

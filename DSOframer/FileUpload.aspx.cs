@@ -11,9 +11,16 @@ namespace DSOframer
 {
     public partial class FileUpload : System.Web.UI.Page
     {
+        protected string DocUrl
+        {
+            get { return "http://" + Request.Url.Authority + "/Doc/test.doc"; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (Stream stream = Request.InputStream)
+            //if (!IsPostBack) return;
+            if (Request.InputStream.Length <= 0) return;
+            using (var stream = Request.InputStream)
             {
                 using (var fs = new FileStream(Server.MapPath("doc/test.doc"), FileMode.Create))
                 {

@@ -20,11 +20,13 @@ function CheckFileOpened() {
 
 //dsoframe(打开)(关闭)事件
 function OnDocumentOpened(str, obj) {
+    alert("触发了dsoframe的OnDocumentOpened事件！");
     isOpened = true;
     oframe.ActiveDocument.Application.UserName = document.getElementById("tUserName").value;
     oframe.ActiveDocument.Saved = true; //saved属性用来判断文档是否被修改过 ,文档打开的时候设置成ture,当文档被修改 ,自动被设置为false,该属性由office提供.
 }
 function OnDocumentClosed() {
+    alert("触发了dsoframe的OnDocumentClosed事件！");
     isOpened = false;
 }
 
@@ -75,6 +77,15 @@ function ToggleMenubar() {
     oframe.Activate();
 }
 
+//检查是否安装控件
+function CheckControlInstall() {
+    if (typeof (oframe) === 'undefined') {
+        alert("You must install dsoframe control first.");
+        return false;
+    } else {
+        return true;
+    }
+}
 
 //Word相关
 function AddNewWord() {
