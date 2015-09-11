@@ -3,12 +3,11 @@ OfficeTools.OnlineEditWord
 
 this tool is used for edit word/excel/ppt in web.
 
-DSOframer 是微软提供一款开源的用于在线编辑 Word、 Excel 、PowerPoint 的 ActiveX 控件。国内很多著名的 OA 中间件，电子印章，签名留痕等大多数是依此改进而来的。虽然博主的公司已经用了 NTKO 取代了 DSOframer，但免费的控件依旧是更多人的选择，所以在此和大家分享一下 DSOframer 的常用功能。如果看完全文还是不能解决您的问题，请在[评论区](http://shijiajie.com/2015/08/30/dsoframer-introduction-resources/#ds-thread)留言，或加入QQ群(95674923)进行学习交流。
+DSOframer 是微软提供一款开源的用于在线编辑 Word、 Excel 、PowerPoint 的 ActiveX 控件。国内很多著名的 OA 中间件，电子印章，签名留痕等大多数是依此改进而来的。虽然博主的公司已经用了 NTKO 取代了 DSOframer，但免费的控件依旧是更多人的选择，所以在此和大家分享一下 DSOframer 的常用功能。如果看完全文还是不能解决您的问题，请在[评论区](http://shijiajie.com/2015/09/02/dsoframer-introduction-resources/#ds-thread)留言，或加入QQ群(95674923)进行学习交流。
 
 - [Demo 演示地址](http://shijiajie.com/other/dsoframer-demo/)
-- [Demo 下载地址](http://pan.baidu.com/s/1eQ77g8i)
 
-![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/2013/01/28/dsoframer-introduction-resources/1.png?ver=1)
+![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/dsoframer-introduction-resources/1.png?ver=1)
 
 资源介绍：
 ---
@@ -26,12 +25,12 @@ DSOframer 是微软提供一款开源的用于在线编辑 Word、 Excel 、Powe
   备注：该控件只有简单的上传、下载、压缩等功能，也是博主用来上传 doc 到服务器的方法。`如果您觉得第三方 ActiveX 不安全，请不要使用这个方法`。
   
   因为该控件未签名，在部分电脑上可能会报以下错误。
-  ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/2013/01/28/dsoframer-introduction-resources/3.png)
+  ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/dsoframer-introduction-resources/3.png?ver=1)
   
   解决方案如下：  
   1.打开IE菜单 `工具->Internet选项`，选择 `安全` 选项卡，点击 `自定义级别` 按钮，将 `下载未签名的ActiveX控件（不安全）` 设置为 `启用（不安全）`。  
   2.打开IE菜单 `工具->Internet选项`，选择 `高级` 选项卡，勾选设置列表中 `允许运行或安装软件，即使签名无效`。
-  ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/2013/01/28/dsoframer-introduction-resources/4.png)
+  ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/dsoframer-introduction-resources/4.png?ver=1)
 
 - DSOframer\OfficialDemo.htm  
   备注：官方安装包中的 Demo，代码是用 vbscript 写的，很多朋友说不能运行。
@@ -40,12 +39,12 @@ DSOframer 是微软提供一款开源的用于在线编辑 Word、 Excel 、Powe
   备注：基于官方安装包的 Demo 用 javascript 重写的版本，功能跟官方 Demo 没有区别。
   
 - DSOframer\CommonDemo.html  
-  备注：常用功能总结，如果大家想让博主在 Demo 加入新的功能，请在[评论区](http://shijiajie.com/2015/08/30/dsoframer-introduction-resources/#ds-thread)留言。
+  备注：常用功能总结，如果大家想让博主在 Demo 加入新的功能，请在[评论区](http://shijiajie.com/2015/09/02/dsoframer-introduction-resources/#ds-thread)留言。
   
 - DSOframer\FileUpload.aspx  
   DSOframer\FileDownload.aspx  
   备注：基于 WebFileHelper2.CAB 控件的上传下载功能的 Demo，`再次重申，如果您觉得第三方 ActiveX 不安全，请不要使用这个方法`。
-  ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/2013/01/28/dsoframer-introduction-resources/2.png)
+  ![](http://7xkhp9.com1.z0.glb.clouddn.com/blog/dsoframer-introduction-resources/2.png?ver=1)
 
 - DSOframer\script.js  
   备注：大部分 DSOframer 操作都在该文件中，并写了详细的注释，请重点参考。
