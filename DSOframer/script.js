@@ -183,7 +183,7 @@ function CopyWithoutFormat() {
 function InsertPicture() {
     if (!CheckFileOpened()) return;
     //var tempFile = "D:\\Code\\github\\stone0090\\OfficeTools.OnlineEditWord\\DSOframer\\Image\\1.jpg";
-    var tempFile = "http://7xkhp9.com1.z0.glb.clouddn.com/blog/2013/01/28/dsoframer-introduction-resources/5.jpg";
+    var tempFile = "http://7xkhp9.com1.z0.glb.clouddn.com/blog/dsoframer-introduction-resources/5.jpg";
     try {
         var oShape = oframe.ActiveDocument.Shapes.AddPicture(tempFile, false, true, oframe.ActiveDocument.Application.Selection.Range);
         oShape.WrapFormat.Type = 3;
